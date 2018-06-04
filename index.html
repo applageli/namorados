@@ -315,6 +315,8 @@
   <script src="js/jquery.js"></script>
   <script src="js/db.js"></script>
   <script src="js/RecordRTC.js"></script>
+  <script src="js/groupby.js"></script>
+  <script src="js/md5.js"></script>
   <script src="js/FileSaver.js"></script>
   <script src="js/jszip.min.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -962,8 +964,8 @@
 
     $('#btnEntrar').click(function() {
       
-      var txtusuario = $('#txtusuario').val();
-      var txtsenha = $('#txtsenha').val();
+      var txtusuario = $('#txtusuario').val()
+      var txtsenha = MD5($('#txtsenha').val())
 
       if ((txtusuario.length > 0) && (txtsenha.length > 0)) {
 
